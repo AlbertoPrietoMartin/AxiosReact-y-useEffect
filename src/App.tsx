@@ -31,26 +31,28 @@ const App = () => {
   }, [finalName]);
 
   return (
-    <>
+  <div className="app">
+    <div className="searchBar">
       <input
         value={name}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
+        placeholder="Search characters across the multiverse..."
+        onChange={(e) => setName(e.target.value)}
       />
-      <button
-        onClick={() => {
-          setFinalName(name);
-        }}
-      >
-        Search
-      </button>
-      {loading && <h2>Loading...</h2>}
-      {error && <h3>Error: {error}</h3>}
-      {!loading &&
-        characters.map((e) => <Character key={e.id} character={e} />)}
-    </>
-  );
+      <button onClick={() => setFinalName(name)}>Search</button>
+    </div>
+
+    {loading && <p className="loading">Loading...</p>}
+    {error && <p className="error">{error}</p>}
+
+    <div className="charactersGrid">
+      {characters.map((c) => (
+        <Character key={c.id} character={c} />
+      ))}
+    </div>
+  </div>
+
+);
+
 };
 
 export default App

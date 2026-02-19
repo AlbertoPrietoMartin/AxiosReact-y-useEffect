@@ -1,12 +1,96 @@
-
-.mainContainer{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    border: solid 1px #CCCC;
-    border-radius: 2px;
+.app {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 25px 40px;
 }
 
+/* =====================
+   SEARCH BAR
+===================== */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 35px;
+  padding: 18px 22px;
+  background-color: #1a0a2c; /* morado oscuro de fondo */
+  border: 1px solid #8c39ff; /* morado neon */
+  border-radius: 12px; /* bordes redondeados */
+}
+
+.searchBar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #b4ffea; /* verde fosfo */
+  font-size: 1.15rem;
+  padding: 10px 0;
+  border-radius: 8px; /* input también con curva */
+}
+
+.searchBar input::placeholder {
+  color: #9d7dff; /* morado claro neon */
+}
+
+.searchBar button {
+  padding: 10px 26px;
+  border-radius: 999px; /* curvo */
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #39ff14,
+    #00d9ff,
+    #b84dff
+  ); /* verde fosfo → azul neón → morado neon */
+  color: #050607;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* =====================
+   STATUS
+===================== */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* =====================
+   GRID – 3 COLUMNAS GRANDES
+===================== */
+.charactersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .charactersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .charactersGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 35px;
+  padding: 18px 22px;
+  border-radius: 12px; /* mantiene curva */
+  border: 1px solid #8c39ff; /* morado neon estilo LED */
+  box-shadow: 0 0 12px #8c39ff; /* efecto neon led */
+}

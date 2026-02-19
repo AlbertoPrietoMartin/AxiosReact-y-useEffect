@@ -1,18 +1,45 @@
-
-
-
 .mainContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    padding: 8px;
-    border: solid 2px #CCCC;
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+  background-color: #1a0a2c; /* morado oscuro base */
+  border-radius: 16px;
+  border: 1px solid #8c39ff; /* borde morado neon */
 }
 
+.mainContainer img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #39ff14; /* verde fosfo glow */
+  flex-shrink: 0;
+}
 
 .characterDataContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 6px 15px 6px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.characterDataContainer h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #39ff14; /* verde fosfo */
+}
+
+.characterDataContainer p {
+  font-size: 0.95rem;
+  color: #00d9ff; /* azul alien */
+}
+
+.mainContainer {
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 16px; /* mantiene curva */
+  border: 1px solid #8c39ff; /* morado neon LED */
+  box-shadow: 0 0 12px #8c39ff; /* efecto LED */
 }
